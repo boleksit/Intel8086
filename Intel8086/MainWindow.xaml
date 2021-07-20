@@ -1,0 +1,96 @@
+﻿<Window x:Class="Intel8086.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="Intel8086 Symulator" Height="500" Width="800">
+    <Window.Resources>
+
+    </Window.Resources>
+    <Grid Margin="10">
+
+        <Label Content="AX" HorizontalAlignment="Left" Height="44" Margin="32,69,0,0" VerticalAlignment="Top" Width="39" FontSize="16"/>
+        <Label Content="BX" HorizontalAlignment="Left" Height="40" Margin="32,106,0,0" VerticalAlignment="Top" Width="39" FontSize="16"/>
+        <Label Content="CX" HorizontalAlignment="Left" Height="43" Margin="32,146,0,0" VerticalAlignment="Top" Width="39" FontSize="16"/>
+        <Label Content="DX" HorizontalAlignment="Left" Height="41" Margin="32,189,0,0" VerticalAlignment="Top" Width="39" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Left" Height="34" Margin="83,67,0,0" Stroke="Black" VerticalAlignment="Top" Width="69"/>
+        <Label x:Name="AX" Content="Binding AX_High" HorizontalAlignment="Left" Margin="83,67,0,0" VerticalAlignment="Top" Height="34" Width="69" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Left" Height="33" Margin="83,109,0,0" Stroke="Black" VerticalAlignment="Top" Width="69"/>
+        <Label x:Name="BX" Content="Label" HorizontalAlignment="Left" Margin="83,109,0,0" VerticalAlignment="Top" Height="33" Width="69" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Left" Height="33" Margin="83,151,0,0" Stroke="Black" VerticalAlignment="Top" Width="69"/>
+        <Label x:Name="CX" Content="Label" HorizontalAlignment="Left" Margin="83,151,0,0" VerticalAlignment="Top" Height="33" Width="69" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Left" Height="33" Margin="83,193,0,0" Stroke="Black" VerticalAlignment="Top" Width="69"/>
+        <Label x:Name="DX" Content="Label" HorizontalAlignment="Left" Margin="83,193,0,0" VerticalAlignment="Top" Height="33" Width="69" FontSize="16"/>
+        <Label Content="AH" HorizontalAlignment="Left" Height="44" Margin="187,67,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+        <Label Content="BH" HorizontalAlignment="Left" Height="40" Margin="187,111,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+        <Label Content="CH" HorizontalAlignment="Left" Height="43" Margin="187,151,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+        <Label Content="DH" HorizontalAlignment="Left" Height="41" Margin="187,194,0,0" VerticalAlignment="Top" Width="40" FontSize="16"/>
+        <Label Content="AL" HorizontalAlignment="Left" Height="44" Margin="349,68,0,0" VerticalAlignment="Top" Width="39" FontSize="16"/>
+        <Label Content="BL" HorizontalAlignment="Left" Height="40" Margin="349,112,0,0" VerticalAlignment="Top" Width="39" FontSize="16"/>
+        <Label Content="CL" HorizontalAlignment="Left" Height="43" Margin="349,152,0,0" VerticalAlignment="Top" Width="39" FontSize="16"/>
+        <Label Content="DL" HorizontalAlignment="Left" Height="41" Margin="349,195,0,0" VerticalAlignment="Top" Width="39" FontSize="16"/>
+        <TextBox x:Name="AH" HorizontalAlignment="Left" Margin="227,69,0,0"  Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="30" FontSize="16" KeyDown="tb_PressEnter2" MaxLength="2" PreviewTextInput="tb_PreviewTextInput"/>
+        <TextBox x:Name="BH" HorizontalAlignment="Left" Margin="227,111,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="30" FontSize="16" KeyDown="tb_PressEnter2" MaxLength="2" PreviewTextInput="tb_PreviewTextInput"/>
+        <TextBox x:Name="CH" HorizontalAlignment="Left" Margin="227,152,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="31" FontSize="16" KeyDown="tb_PressEnter2" MaxLength="2" PreviewTextInput="tb_PreviewTextInput"/>
+        <TextBox x:Name="DH" HorizontalAlignment="Left" Margin="227,194,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="30" FontSize="16" KeyDown="tb_PressEnter2" MaxLength="2" PreviewTextInput="tb_PreviewTextInput"/>
+        <TextBox x:Name="AL" HorizontalAlignment="Left" Margin="390,68,0,0"  Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="30" FontSize="16" KeyDown="tb_PressEnter2" MaxLength="2" PreviewTextInput="tb_PreviewTextInput"/>
+        <TextBox x:Name="BL" HorizontalAlignment="Left" Margin="390,112,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="30" FontSize="16" KeyDown="tb_PressEnter2" MaxLength="2" PreviewTextInput="tb_PreviewTextInput"/>
+        <TextBox x:Name="CL" HorizontalAlignment="Left" Margin="390,152,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="31" FontSize="16" KeyDown="tb_PressEnter2" MaxLength="2" PreviewTextInput="tb_PreviewTextInput"/>
+        <TextBox x:Name="DL" HorizontalAlignment="Left" Margin="390,194,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="30" FontSize="16" KeyDown="tb_PressEnter2" MaxLength="2" PreviewTextInput="tb_PreviewTextInput"/>
+        <ComboBox x:Name="cb_From" HorizontalAlignment="Left" Margin="588,318,0,0" VerticalAlignment="Top" Width="72" FontSize="16" Height="27">
+            <ComboBoxItem IsSelected="True">AX</ComboBoxItem>
+            <ComboBoxItem>BX</ComboBoxItem>
+            <ComboBoxItem>CX</ComboBoxItem>
+            <ComboBoxItem>DX</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="cb_To" HorizontalAlignment="Left" Margin="588,369,0,0" VerticalAlignment="Top" Width="72" FontSize="16" Height="27">
+            <ComboBoxItem>AX</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">BX</ComboBoxItem>
+            <ComboBoxItem>CX</ComboBoxItem>
+            <ComboBoxItem>DX</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="btn_mov" Content="MOV" HorizontalAlignment="Left" Margin="682,254,0,0" VerticalAlignment="Top" Height="30" Width="72" FontSize="16" Click="btn_mov_Click" />
+        <Button x:Name="btn_xchn" Content="XCHG" HorizontalAlignment="Left" Margin="588,254,0,0" VerticalAlignment="Top" Height="30" Width="72" FontSize="16" Click="btn_xchn_Click" />
+
+        <Label Content="FROM" HorizontalAlignment="Left" Height="44" Margin="588,287,0,0" VerticalAlignment="Top" Width="72" FontSize="16"/>
+        <Label Content="TO" HorizontalAlignment="Left" Height="44" Margin="588,340,0,0" VerticalAlignment="Top" Width="72" FontSize="16"/>
+        <Button x:Name="btn_reset" Content="RESET" HorizontalAlignment="Left" Margin="579,174,0,0" VerticalAlignment="Top" Height="30" Width="81" FontSize="16" Click="btn_reset_Click" />
+        <Button x:Name="btn_random" Content="RANDOM" HorizontalAlignment="Left" Margin="579,90,0,0" VerticalAlignment="Top" Height="30" Width="81" FontSize="16" Click="btn_random_Click" />
+        <Label Content="SI" HorizontalAlignment="Left" Height="44" Margin="32,235,0,0" VerticalAlignment="Top" Width="39" FontSize="16" RenderTransformOrigin="0.436,0.524"/>
+        <Label Content="DI" HorizontalAlignment="Left" Height="40" Margin="32,273,0,0" VerticalAlignment="Top" Width="39" FontSize="16"/>
+        <Label Content="BP" HorizontalAlignment="Left" Height="43" Margin="32,313,0,0" VerticalAlignment="Top" Width="39" FontSize="16"/>
+        <Label Content="SP" HorizontalAlignment="Left" Height="41" Margin="32,356,0,0" VerticalAlignment="Top" Width="39" FontSize="16" Grid.RowSpan="2"/>
+        <Rectangle HorizontalAlignment="Left" Height="34" Margin="83,234,0,0" Stroke="Black" VerticalAlignment="Top" Width="69"/>
+        <Label x:Name="SI" Content="Binding AX_High" HorizontalAlignment="Left" Margin="83,234,0,0" VerticalAlignment="Top" Height="34" Width="69" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Left" Height="33" Margin="83,276,0,0" Stroke="Black" VerticalAlignment="Top" Width="69"/>
+        <Label x:Name="DI" Content="Label" HorizontalAlignment="Left" Margin="83,276,0,0" VerticalAlignment="Top" Height="33" Width="69" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Left" Height="33" Margin="83,318,0,0" Stroke="Black" VerticalAlignment="Top" Width="69"/>
+        <Label x:Name="BP" Content="Label" HorizontalAlignment="Left" Margin="83,318,0,0" VerticalAlignment="Top" Height="33" Width="69" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Left" Height="33" Margin="83,360,0,0" Stroke="Black" VerticalAlignment="Top" Width="69"/>
+        <Label x:Name="SP" Content="Label" HorizontalAlignment="Left" Margin="83,360,0,0" VerticalAlignment="Top" Height="33" Width="69" FontSize="16"/>
+        <TextBox x:Name="SI_i" HorizontalAlignment="Left" Margin="187,237,0,0"  Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="29" FontSize="16" KeyDown="tb_PressEnter4" MaxLength="4" PreviewTextInput="tb_PreviewTextInput"/>
+        <TextBox x:Name="DI_i" HorizontalAlignment="Left" Margin="187,278,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="30" FontSize="16" KeyDown="tb_PressEnter4" MaxLength="4" PreviewTextInput="tb_PreviewTextInput"/>
+        <TextBox x:Name="BP_i" HorizontalAlignment="Left" Margin="187,320,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="30" FontSize="16" KeyDown="tb_PressEnter4" MaxLength="4" PreviewTextInput="tb_PreviewTextInput"/>
+        <TextBox x:Name="SP_i" HorizontalAlignment="Left" Margin="187,362,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="30" FontSize="16" KeyDown="tb_PressEnter4" MaxLength="4" PreviewTextInput="tb_PreviewTextInput"/>
+        <RadioButton x:Name="regreg" Content="z rejestru do rejestru" HorizontalAlignment="Center" Margin="0,272,0,0" VerticalAlignment="Top" GroupName="kierunek" IsChecked="True" Height="14" Width="128"/>
+        <RadioButton x:Name="regmem" Content="z rejestru do pamięci" HorizontalAlignment="Center" Margin="0,290,0,0" VerticalAlignment="Top" GroupName="kierunek" Height="14" Width="129"/>
+        <RadioButton x:Name="memreg" Content="z pamięci do rejestru" HorizontalAlignment="Center" Margin="0,310,0,0" VerticalAlignment="Top" GroupName="kierunek" Height="14" Width="129"/>
+        <RadioButton x:Name="index" Content="indeksowy" HorizontalAlignment="Left" Margin="325,356,0,0" VerticalAlignment="Top" GroupName="tryb" IsChecked="True" Height="16" Width="75"/>
+        <RadioButton x:Name="base" Content="bazowy" HorizontalAlignment="Left" Margin="325,374,0,0" VerticalAlignment="Top" GroupName="tryb" Height="14" Width="59"/>
+        <RadioButton x:Name="indexbase" Content="indeksowo-bazowy" HorizontalAlignment="Left" Margin="325,389,0,0" VerticalAlignment="Top" GroupName="tryb" Height="15" Width="121" Grid.RowSpan="2"/>
+        <RadioButton x:Name="si" Content="SI" HorizontalAlignment="Left" Margin="519,290,0,0" VerticalAlignment="Top" GroupName="indeksowy" Height="16" Width="29" IsChecked="True"/>
+        <RadioButton x:Name="di" Content="DI" HorizontalAlignment="Left" Margin="519,310,0,0" VerticalAlignment="Top" GroupName="indeksowy" Height="16" Width="31"/>
+        <RadioButton x:Name="bx" Content="BX" HorizontalAlignment="Left" Margin="519,356,0,0" VerticalAlignment="Top" GroupName="bazowy" Height="16" Width="33" IsChecked="True"/>
+        <RadioButton x:Name="bp" Content="BP" HorizontalAlignment="Left" Margin="519,376,0,0" VerticalAlignment="Top" GroupName="bazowy" Height="16" Width="33"/>
+        <Label Content="DISP" HorizontalAlignment="Left" Height="41" Margin="25,402,0,0" VerticalAlignment="Top" Width="46" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Left" Height="33" Margin="83,402,0,0" Stroke="Black" VerticalAlignment="Top" Width="69"/>
+        <Label x:Name="DISP" Content="Label" HorizontalAlignment="Left" Margin="83,402,0,0" VerticalAlignment="Top" Height="33" Width="69" FontSize="16"/>
+        <TextBox x:Name="Disp_i" HorizontalAlignment="Left" Margin="187,404,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="30" FontSize="16" KeyDown="tb_PressEnter4" MaxLength="4" PreviewTextInput="tb_PreviewTextInput"/>
+        <Button x:Name="btn_push" Content="PUSH" HorizontalAlignment="Left" Margin="682,316,0,0" VerticalAlignment="Top" Height="30" Width="72" FontSize="16" Click="btn_push_Click" />
+        <Button x:Name="btn_pop" Content="POP" HorizontalAlignment="Left" Margin="682,369,0,0" VerticalAlignment="Top" Height="30" Width="72" FontSize="16" Click="btn_pop_Click" />
+        <Label Content="Symulator rozkazów procesora Intel 8086&#xD;&#xA;" HorizontalAlignment="Left" Margin="187,6,0,0" VerticalAlignment="Top" Width="458" FontSize="20" Background="White" Foreground="#FF1F8D38" FontWeight="Bold" Height="44"/>
+
+    </Grid>
+</Window>
